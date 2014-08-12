@@ -44,9 +44,9 @@ public class QueryServiceServer {
 			 */
 			// 构建一个命名上下文，用来访问RMI注册表
 			Context context = new InitialContext();
-			// 将name和对象绑定，"rmi:"表示rmi协议
+			// 将name和对象绑定，"rmi:"表示rmi协议，默认情况下主机是 localhost，端口是1099
 			context.bind("rmi:query1", service1);
-			context.bind("rmi:query2", service2);
+			context.bind("rmi://localhost:1099/query2", service2);
 			
 			System.out.println("Waiting for invokations from clients...");
 		} catch (Exception e) {

@@ -45,7 +45,7 @@ public class QueryServiceClient {
 			System.out.println("[query1]server message:\n" + service.getMessage());
 			
 			// 返回给定名字的对象
-			service = (IQueryService) context.lookup("rmi://localhost/query2");
+			service = (IQueryService) context.lookup("rmi://localhost:1099/query2");
 			System.out.println("[query2]server message:\n" + service.getMessage());
 
 			// 可以使用instanceof判断一个远程对象是否实现了某个接口
