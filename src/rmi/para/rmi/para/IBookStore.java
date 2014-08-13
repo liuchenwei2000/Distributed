@@ -22,4 +22,9 @@ public interface IBookStore extends Remote {
 	 * Book对象将作为返回结果由服务器传递给客户端，这两个类都需要实现Serializable接口。
 	 */
 	public Book findBook(BookInfo info) throws RemoteException;
+	
+	/**
+	 * 根据参数信息删除相应的Book对象
+	 */
+	public boolean delete(BookInfo info) throws RemoteException;
 }

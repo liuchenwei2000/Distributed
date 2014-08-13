@@ -23,7 +23,6 @@ public class BookInfo implements Serializable {
 	
 	private String name;
 	private String author;
-	
 
 	public BookInfo(String name, String author) {
 		this.name = name;

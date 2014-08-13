@@ -25,15 +25,6 @@ public class QueryServiceClient {
 	public static void main(String[] args) {
 		try {
 			System.out.println("Client starts...");
-			/**
-			 * 使用RMI的客户端程序应该安装一个安全管理器(如下)，用以控制动态加载存根的行为。
-			 * <p>
-			 * 如果所有的类(包括存根)在本地都是可用的，那么安全管理器就不是必须的了。
-			 * 然而通常情况下，服务器程序在不断的进化，新的类不断地被添加到其中，那时就能体现动态加载类的好处了。
-			 * 无论何时，只要从另一个地方加载代码，就需要一个安全管理器。
-			 * applet已经具备了一个安全管理器，能够控制存根类的加载，当applet中用到RMI时，就不需要安装另外的安全管理器了。
-			 */
-//			System.setSecurityManager(new RMISecurityManager());
 			
 			Context context = new InitialContext();
 			/**

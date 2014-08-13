@@ -45,4 +45,8 @@ public class BookStoreImpl implements IBookStore {
 	private int random() {
 		return (int) (Math.random() * 100);
 	}
+
+	public boolean delete(BookInfo info) throws RemoteException {
+		return true;
+	}
 }
