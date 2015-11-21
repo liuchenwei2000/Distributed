@@ -9,13 +9,13 @@ import javax.naming.InitialContext;
 import rmi.IQueryService;
 
 /**
- * ¿Í»§¶Ë³ÌĞò
+ * å®¢æˆ·ç«¯ç¨‹åº
  * <p>
- * ¶ÔÔ¶³Ì¶ÔÏó·¢Æğµ÷ÓÃ¡£
+ * å¯¹è¿œç¨‹å¯¹è±¡å‘èµ·è°ƒç”¨ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-6
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-6
  */
 public class QueryServiceClient {
 
@@ -28,22 +28,22 @@ public class QueryServiceClient {
 			
 			Context context = new InitialContext();
 			/**
-			 * µ±Ô¶³Ì·½·¨±»µ÷ÓÃÊ±£¬¸Ã½Ó¿Ú±äÁ¿Ö¸ÏòÒ»¸ö´æ¸ù¶ÔÏó¡£
-			 * ¿Í»§¶Ë³ÌĞòÊµ¼ÊÉÏ²¢²»ÖªµÀÄÇĞ©¶ÔÏóµÄÀàĞÍ£¬¶ø´æ¸ùÀàÒÔ¼°Ïà¹ØµÄ¶ÔÏó¶¼ÊÇ×Ô¶¯Éú³ÉµÄ¡£
+			 * å½“è¿œç¨‹æ–¹æ³•è¢«è°ƒç”¨æ—¶ï¼Œè¯¥æ¥å£å˜é‡æŒ‡å‘ä¸€ä¸ªå­˜æ ¹å¯¹è±¡ã€‚
+			 * å®¢æˆ·ç«¯ç¨‹åºå®é™…ä¸Šå¹¶ä¸çŸ¥é“é‚£äº›å¯¹è±¡çš„ç±»å‹ï¼Œè€Œå­˜æ ¹ç±»ä»¥åŠç›¸å…³çš„å¯¹è±¡éƒ½æ˜¯è‡ªåŠ¨ç”Ÿæˆçš„ã€‚
 			 */
-			// ·µ»Ø¸ø¶¨Ãû×ÖµÄ¶ÔÏó
+			// è¿”å›ç»™å®šåå­—çš„å¯¹è±¡
 			IQueryService service = (IQueryService) context.lookup("rmi://localhost/query1");
 			System.out.println("[query1]server message:\n" + service.getMessage());
 			
-			// ·µ»Ø¸ø¶¨Ãû×ÖµÄ¶ÔÏó
+			// è¿”å›ç»™å®šåå­—çš„å¯¹è±¡
 			service = (IQueryService) context.lookup("rmi://localhost:1099/query2");
 			System.out.println("[query2]server message:\n" + service.getMessage());
 
-			// ¿ÉÒÔÊ¹ÓÃinstanceofÅĞ¶ÏÒ»¸öÔ¶³Ì¶ÔÏóÊÇ·ñÊµÏÖÁËÄ³¸ö½Ó¿Ú
+			// å¯ä»¥ä½¿ç”¨instanceofåˆ¤æ–­ä¸€ä¸ªè¿œç¨‹å¯¹è±¡æ˜¯å¦å®ç°äº†æŸä¸ªæ¥å£
 			if(service instanceof IQueryService){
 				// do something
 			}
-			// µ«ÊÇ²»ÄÜÏòÏÂÃæÄÇÑù½øĞĞÅĞ¶Ï£¬ÒòÎªserviceÖ¸ÏòµÄÊÇÒ»¸ö´æ¸ù¶ÔÏó£¬¶ø²»ÊÇ·şÎñÆ÷¶ÔÏó
+			// ä½†æ˜¯ä¸èƒ½å‘ä¸‹é¢é‚£æ ·è¿›è¡Œåˆ¤æ–­ï¼Œå› ä¸ºserviceæŒ‡å‘çš„æ˜¯ä¸€ä¸ªå­˜æ ¹å¯¹è±¡ï¼Œè€Œä¸æ˜¯æœåŠ¡å™¨å¯¹è±¡
 //			if(service instanceof QueryServiceImpl)
 			
 			Thread.sleep(5000);

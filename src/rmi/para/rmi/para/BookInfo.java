@@ -6,13 +6,13 @@ package rmi.para;
 import java.io.Serializable;
 
 /**
- * BookInfoÀà
+ * BookInfoç±»
  * <p>
- * ×÷Îª¿ÉÍ¨¹ıÍøÂç´«µİµÄ¶ÔÏó£¬ÊµÏÖÁËSerializable½Ó¿Ú¡£
+ * ä½œä¸ºå¯é€šè¿‡ç½‘ç»œä¼ é€’çš„å¯¹è±¡ï¼Œå®ç°äº†Serializableæ¥å£ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-9
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-9
  */
 public class BookInfo implements Serializable {
 

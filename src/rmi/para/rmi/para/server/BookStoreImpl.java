@@ -10,11 +10,11 @@ import rmi.para.BookInfo;
 import rmi.para.IBookStore;
 
 /**
- * BookStoreÊµÏÖÀà
+ * BookStoreå®ç°ç±»
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-9
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-9
  */
 public class BookStoreImpl implements IBookStore {
 
@@ -29,7 +29,7 @@ public class BookStoreImpl implements IBookStore {
 	}
 
 	/**
-	 * Ä£Äâ²éÑ¯Êı¾İ¿â
+	 * æ¨¡æ‹ŸæŸ¥è¯¢æ•°æ®åº“
 	 */
 	private Book queryDB(String name, String author) {
 		// query db

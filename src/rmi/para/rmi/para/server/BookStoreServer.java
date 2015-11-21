@@ -11,11 +11,11 @@ import javax.naming.InitialContext;
 import rmi.para.IBookStore;
 
 /**
- * BookStore·şÎñÆ÷³ÌĞò
+ * BookStoreæœåŠ¡å™¨ç¨‹åº
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-6
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-6
  */
 public class BookStoreServer {
 
@@ -26,13 +26,13 @@ public class BookStoreServer {
 		try {
 			System.out.println("Constructing server implementations...");
 			
-			// ²ÉÓÃÏÂÃæµÄ·½Ê½£¬½«Ò»¸öÆÕÍ¨¶ÔÏóµ¼³ö³ÉÔ¶³Ì¶ÔÏó
+			// é‡‡ç”¨ä¸‹é¢çš„æ–¹å¼ï¼Œå°†ä¸€ä¸ªæ™®é€šå¯¹è±¡å¯¼å‡ºæˆè¿œç¨‹å¯¹è±¡
 			IBookStore bookstore = (IBookStore) UnicastRemoteObject.exportObject(new BookStoreImpl(), 0);
 			
 			System.out.println("Binding server implementations to registry...");
 			
 			Context context = new InitialContext();
-			// ½«IBookStoreµÄÊµ¼Ê¶ÔÏó×¢²áµ½rmi×¢²á±íÖĞ
+			// å°†IBookStoreçš„å®é™…å¯¹è±¡æ³¨å†Œåˆ°rmiæ³¨å†Œè¡¨ä¸­
 			context.bind("rmi:bookstore", bookstore);
 			
 			System.out.println("Waiting for invokations from clients...");

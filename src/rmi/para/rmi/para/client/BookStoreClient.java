@@ -11,11 +11,11 @@ import rmi.para.BookInfo;
 import rmi.para.IBookStore;
 
 /**
- * BookStore�ͻ���
+ * BookStore客户端
  * 
- * @author ����ΰ
+ * @author 刘晨伟
  * 
- * �������ڣ�2013-7-6
+ * 创建日期：2013-7-6
  */
 public class BookStoreClient {
 
@@ -25,12 +25,12 @@ public class BookStoreClient {
 	public static void main(String[] args) {
 		try {
 			/**
-			 * ʹ��RMI�Ŀͻ��˳���Ӧ�ð�װһ����ȫ������(����)�����Կ��ƶ�̬���ش������Ϊ��
+			 * 使用RMI的客户端程序应该安装一个安全管理器(如下)，用以控制动态加载存根的行为。
 			 * <p>
-			 * ������е���(�������)�ڱ��ض��ǿ��õģ���ô��ȫ�������Ͳ��Ǳ�����ˡ�
-			 * Ȼ��ͨ������£������������ڲ��ϵĽ������µ��಻�ϵر����ӵ����У���ʱ�������ֶ�̬������ĺô��ˡ�
-			 * ���ۺ�ʱ��ֻҪ����һ���ط����ش��룬����Ҫһ����ȫ��������
-			 * applet�Ѿ��߱���һ����ȫ���������ܹ����ƴ����ļ��أ���applet���õ�RMIʱ���Ͳ���Ҫ��װ����İ�ȫ�������ˡ�
+			 * 如果所有的类(包括存根)在本地都是可用的，那么安全管理器就不是必须的了。
+			 * 然而通常情况下，服务器程序在不断的进化，新的类不断地被添加到其中，那时就能体现动态加载类的好处了。
+			 * 无论何时，只要从另一个地方加载代码，就需要一个安全管理器。
+			 * applet已经具备了一个安全管理器，能够控制存根类的加载，当applet中用到RMI时，就不需要安装另外的安全管理器了。
 			 */
 //			System.setProperty("java.security.policy", "client.policy");
 //			System.setSecurityManager(new SecurityManager());
@@ -38,15 +38,15 @@ public class BookStoreClient {
 			System.out.println("BookStoreClient starts...");
 			
 			Context context = new InitialContext();
-			// ����Զ�̶���IBookStore��ʵ�����Ǹ����(�����)
+			// 返回远程对象IBookStore，实际上是个存根(或代理)
 			IBookStore bookstore = (IBookStore) context.lookup("rmi://localhost/bookstore");
 			
-			// ����һ��Զ�̵���
+			// 发起一次远程调用
 			BookInfo info = new BookInfo("Thinking in Java", "Bruce Eckel");
 			Book book = bookstore.findBook(info);
 			System.out.println("find the book:\n" + book);
 			
-			// ����ڶ���Զ�̵���
+			// 发起第二次远程调用
 			info = new BookInfo("Java in Action", "Tom Cruise");
 			boolean b = bookstore.delete(info);
 			if (b) {

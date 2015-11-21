@@ -9,18 +9,18 @@ import java.util.Date;
 import rmi.IQueryService;
 
 /**
- * Ô¶³Ì¶ÔÏó½Ó¿ÚµÄ·şÎñÆ÷¶ËÊµÏÖÀà
+ * è¿œç¨‹å¯¹è±¡æ¥å£çš„æœåŠ¡å™¨ç«¯å®ç°ç±»
  * <p>
- * ĞèÒª×¢ÒâµÄÊÇ£¬±¾ÀàÃ»ÓĞ¼Ì³ĞUnicastRemoteObject£¬¶øÊÇ²ÉÓÃÔÚQueryServiceServerÖĞÉú³É·şÎñÆ÷¶ÔÏóµÄ·½Ê½¡£
+ * éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œæœ¬ç±»æ²¡æœ‰ç»§æ‰¿UnicastRemoteObjectï¼Œè€Œæ˜¯é‡‡ç”¨åœ¨QueryServiceServerä¸­ç”ŸæˆæœåŠ¡å™¨å¯¹è±¡çš„æ–¹å¼ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-6
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-6
  */
 public class QueryServiceImplB implements IQueryService {
 
 	public String getMessage() throws RemoteException {
-		// Ä£Äâ²éÑ¯Êı¾İ¿âÕâÀàÖ»ÄÜÔÚ·şÎñÆ÷¶Ë²ÅÄÜÍê³ÉµÄ¹¤×÷
+		// æ¨¡æ‹ŸæŸ¥è¯¢æ•°æ®åº“è¿™ç±»åªèƒ½åœ¨æœåŠ¡å™¨ç«¯æ‰èƒ½å®Œæˆçš„å·¥ä½œ
 		String message = queryFomrDB();
 		return message;
 	}

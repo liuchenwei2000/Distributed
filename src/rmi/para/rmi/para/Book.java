@@ -6,13 +6,13 @@ package rmi.para;
 import java.io.Serializable;
 
 /**
- * BookÀà
+ * Bookç±»
  * <p>
- * ×÷Îª¿ÉÍ¨¹ıÍøÂç´«µİµÄ¶ÔÏó£¬ÊµÏÖÁËSerializable½Ó¿Ú¡£
+ * ä½œä¸ºå¯é€šè¿‡ç½‘ç»œä¼ é€’çš„å¯¹è±¡ï¼Œå®ç°äº†Serializableæ¥å£ã€‚
  * 
- * @author Áõ³¿Î°
+ * @author åˆ˜æ™¨ä¼Ÿ
  * 
- * ´´½¨ÈÕÆÚ£º2013-7-9
+ * åˆ›å»ºæ—¥æœŸï¼š2013-7-9
  */
 public class Book implements Serializable {
 
@@ -68,7 +68,7 @@ public class Book implements Serializable {
 	}
 
 	public String toString() {
-		return "Name£º" + name + "\nAuthor£º" + author + "\nISBN£º" + ISBN
-				+ "\nPrice£º" + price + "\nStock£º" + stock;
+		return "Nameï¼š" + name + "\nAuthorï¼š" + author + "\nISBNï¼š" + ISBN
+				+ "\nPriceï¼š" + price + "\nStockï¼š" + stock;
 	}
 }
